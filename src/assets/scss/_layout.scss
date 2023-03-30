@@ -1,0 +1,30 @@
+$body-min-width: 1400px;
+$sidebar-width: 200px;
+
+html,
+body,
+#wrap,
+#container{min-height: 100vh;}
+
+.container,
+.container-fluid{
+  padding-left: 2rem;padding-right: 2rem;
+}
+
+body{min-width: $body-min-width;}
+
+
+#container{display: flex;}
+
+#aside{
+  width: $sidebar-width;flex: 0 0 $sidebar-width;min-height: 100vh;background: #000;display: flex;flex-direction: column;height: 100vh;position: sticky;top:0;
+}
+
+#main{
+  padding-bottom: 60px;
+  flex-grow: 1;
+}
+
+#header{
+  background: #e7f4f4;margin-bottom: 40px;
+}

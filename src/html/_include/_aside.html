@@ -1,0 +1,38 @@
+<aside id="aside">
+  <div class="sidebar-brand">
+    <img src="@@webRoot/assets/images/logo.png" alt="PRUGIO 관리자" />
+    <span>관리자</span>
+  </div>
+  <nav class="sidebar-nav-wrap">
+    <ul class="sidebar-nav">
+      <li>
+        <a href="@@webRoot/html/dashboard/dashboard.html">
+          <span>메뉴(2뎁스 X)</span>
+        </a>
+      </li>
+      <li class="has-treeview active show">
+        <!-- 현재 페이지 .active.show -->
+        <a href="#none">
+          <span>메뉴(2뎁스 O)</span>
+        </a>
+        <ul class="second-level">
+          <li><a href="#none"><span>서브 메뉴</span></a></li>
+          <li class="active"><a href="#none"><span>서브 메뉴</span></a></li>
+          <li><a href="#none"><span>서브 메뉴</span></a></li>
+        </ul>
+      </li>
+      @@for (var i = 30; i > 0; i--) {
+      <li class="has-treeview">
+        <a href="#none">
+          <span>메뉴(2뎁스 O)</span>
+        </a>
+        <ul class="second-level">
+          <li><a href="#none"><span>서브 메뉴</span></a></li>
+          <li><a href="#none"><span>서브 메뉴</span></a></li>
+          <li><a href="#none"><span>서브 메뉴</span></a></li>
+        </ul>
+      </li>
+      }
+    </ul>
+  </nav>
+</aside>

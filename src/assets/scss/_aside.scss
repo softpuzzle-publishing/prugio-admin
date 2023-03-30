@@ -1,0 +1,74 @@
+.sidebar-brand{
+  height: 95px;display: flex;flex-direction: column;gap: 10px;align-items: center;justify-content: center;padding: 0 20px;text-align: center;background: $green;
+  flex-shrink: 0;
+  img{max-width: 100%;}
+  span{font-size: 20px;font-weight: 700;color: #fff;line-height: 1;}
+}
+
+.sidebar-nav-wrap{max-height: 100%;flex-grow: 1;overflow-y: auto;}
+.sidebar-nav{
+  $show-color: #444;
+  a{
+    display: flex;align-items: center;white-space: nowrap;color: #fff;text-decoration: none;height: 40px;padding: 0 1rem;font-size: 15px;font-weight: 500;
+  }
+  > li{
+    position: relative;
+    > a{border-top: 1px solid #333;}
+    &.has-treeview{
+      > a{
+        justify-content: space-between;
+        &::after{
+          content: '';display: block;width: 40px;height: 40px; background: url('../images/icon-sidebar-arrow.svg') no-repeat 0 0;transition: transform .15s;
+        }
+      }
+    }
+  }
+  .second-level{
+    display: none;
+    > li{
+      > a{padding-left: 2rem;}
+      &.active{
+        > a{
+          background: #666;position: relative;
+          span{
+            position: relative;
+            &::before{content: '';display: block;position: absolute;left: 0;bottom: 0;right: 0;height: 1px;background-color: #ddd;}
+
+          }
+        }
+      }
+    }
+  }
+  > li.active{
+    .second-level{display: block;}
+    > a{
+      &::after{transform: rotate(180deg);}
+    }
+  }
+  > li.show{
+    background: $show-color;
+  }
+}
+
+.sidebar-bottom{
+  padding: 0 20px 20px;color: #fff;
+  .user{
+    display: flex;border-top: 1px solid #333;border-bottom: 1px solid #333;padding: 15px 0;
+    .profile{
+      flex: 0 0 40px;width: 40px;height: 40px;border-radius: 10px;background: #333;overflow: hidden;
+      background: url('../images/slbs-symbol.svg') no-repeat 50% 50%;background-size: 30px auto;
+      img{width: 100%;height: 100%;object-fit: cover;}
+    }
+    .info{
+      flex-grow: 1;margin-left: 15px;
+      .name{font-size: 14px;font-weight: 700;}
+      .role{font-size: 10px;font-weight: 700;color: #ccc;margin-top: 2px;}
+    }
+  }
+  .user-menu{
+    padding-top: 10px;
+    li{margin-bottom: 10px;}
+    i{margin-right: 10px;margin-left: 0;}
+    a{color: #ccc;font-size: 12px;font-weight: 700;}
+  }
+}
