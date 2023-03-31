@@ -1,10 +1,20 @@
 $red: #F23D4C !default;
 $blue: #247AF2 !default;
 $green: #035152 !default;
+$yellow: #ffaa00 !default;
+$black: #000 !default;
 $dark: #000 !default;
 $gray: #999 !default;
+$gray-600: #6c757d !default;
+$white: #fff !default;
 
-$min-contrast-ratio: 3 !default;
+$primary: $green !default;
+$secondary: $gray-600 !default;
+$success: $blue !default;
+$danger: $red !default;
+$warning: $yellow !default;
+
+$min-contrast-ratio: 1.8 !default;
 
 $font-family-base: 'Pretendard', 'NanumGothic', system-ui, -apple-system, arial !default;
 

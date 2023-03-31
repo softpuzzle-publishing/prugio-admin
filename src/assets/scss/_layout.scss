@@ -11,9 +11,6 @@ body,
   padding-left: 2rem;padding-right: 2rem;
 }
 
-body{min-width: $body-min-width;}
-
-
 #container{display: flex;}
 
 #aside{
@@ -23,6 +20,7 @@ body{min-width: $body-min-width;}
 #main{
   padding-bottom: 60px;
   flex-grow: 1;
+  max-width: calc(100% - $sidebar-width);
 }
 
 #header{
