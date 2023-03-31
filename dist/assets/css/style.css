@@ -470,6 +470,10 @@ body,
   font-weight: 700;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
+
 .btn-xs {
   font-size: 10px;
   padding: 0.2rem 0.5rem;
