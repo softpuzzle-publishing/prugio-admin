@@ -206,7 +206,7 @@ table{
 .table-scroll-x{
   position: relative;overflow: hidden;
   .table-inner{overflow-x: scroll;overflow-y: hidden;}
-  .cell-fixed{position: absolute;top: auto;display: flex;align-items: center;justify-content: center;background: #f3f4f5;}
+  .cell-fixed{position: absolute;top: auto;display: flex;align-items: center;justify-content: center;background: #f3f4f5; z-index: -1;}
   th,
   td{
     vertical-align: middle;white-space: nowrap;height: 60px;padding-left: 1rem;padding-right: 1rem;line-height: 1.25;
