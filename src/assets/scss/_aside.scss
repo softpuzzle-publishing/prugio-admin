@@ -90,3 +90,66 @@
     a{color: #ccc;font-size: 12px;font-weight: 700;}
   }
 }
+
+.side-nav {
+  a{
+    display: block;
+    padding: 10px 15px;
+    color: #c0cbdc;
+    transition: all .25s ease-in-out;
+    text-decoration: none;
+    font-weight: 500;
+    &:focus,
+    &:hover,
+    &:active{
+      color: #72e9cd;
+    }
+    &.active{
+      color: #5cedcc !important;
+    }
+    &.dep1{
+      font-size: 16px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      &.active{
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+    &.dep2{
+      font-size: 15px;
+      margin-left: 15px;
+      padding-top: 8px;padding-bottom: 8px;
+      & + div{
+        position: absolute;left: 100%;top: 0;z-index: 1;
+        width: 240px;background: #1a2942;
+      }
+    }
+    &.dep3{
+      font-size: 14px;
+      margin-left: 35px;
+      padding-top: 8px;padding-bottom: 8px;
+
+    }
+  }
+  div {
+    display: none;
+  }
+  .opened {
+    display: block;
+  }
+  .has-treemenu{
+    position: relative;
+    &::after{
+      content: "\e5cc";
+      font-family: 'Material Icons';
+      font-size: 16px;
+      position: absolute;right: 15px;top: 50%;transform: translateY(-50%);
+      transition: all .2s;
+    }
+    &.active,
+    &.focus{
+      &::after{
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+}

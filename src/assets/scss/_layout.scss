@@ -1,5 +1,5 @@
 $body-min-width: 1400px;
-$sidebar-width: 200px;
+$sidebar-width: 240px;
 
 html,
 body,
@@ -14,7 +14,7 @@ body,
 #container{display: flex;}
 
 #aside{
-  width: $sidebar-width;flex: 0 0 $sidebar-width;min-height: 100vh;background: #000;display: flex;flex-direction: column;height: 100vh;position: sticky;top:0;
+  width: $sidebar-width;flex: 0 0 $sidebar-width;min-height: 100vh;background: #1a2942;display: flex;flex-direction: column;height: 100vh;position: sticky;top:0;
 }
 
 #main{

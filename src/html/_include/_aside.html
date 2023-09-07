@@ -18,7 +18,7 @@
         <ul class="second-level">
           <li>
             <a href="#none"><span>서브 메뉴</span></a>
-             <ul class="third-level">
+            <ul class="third-level">
               <li><a href="#none">Default</a></li>
               <li><a href="#none">Genuine</a></li>
             </ul>
@@ -84,5 +84,96 @@
       </li>
       }
     </ul>
+    <div class="side-nav">
+      <a href="" class="dep1">회원관리</a>
+      <div>
+        <a href="" class="dep2">가입회원</a>
+        <a href="" class="dep2">탈퇴회원</a>
+      </div>
+      <a href="" class="dep1 has-treemenu active">통계</a> <!-- 활성화 .active -->
+      <div class="opened"> <!-- 열림 .opened -->
+        <a href="" class="dep2">서비스 운영 현황</a>
+        <a href="" class="dep2 has-treemenu active">가입 현황</a> <!-- 활성화 .active -->
+        <div class="opened"> <!-- 오픈 .opened -->
+          <a href="" class="dep3 active">연령별/성별</a> <!-- 활성화 .active -->
+          <a href="" class="dep3">지역별</a>
+          <a href="" class="dep3">단지별</a>
+        </div>
+        <a href="" class="dep2 has-treemenu">접속 현황</a>
+        <div>
+          <a href="" class="dep3">유입경로별</a>
+          <a href="" class="dep3">OS별</a>
+        </div>
+        <a href="" class="dep2 has-treemenu">이용 및 신청 현황</a>
+        <div>
+          <a href="" class="dep3">메뉴별</a>
+          <a href="" class="dep3">AS 신청</a>
+          <a href="" class="dep3">AS 접수처리</a>
+          <a href="" class="dep3">내집방문예약 신청</a>
+          <a href="" class="dep3">입주예약 신청</a>
+          <a href="" class="dep3">서비스 이용 내역</a>
+          <a href="" class="dep3">개인정보 다운로드 내역</a>
+          <a href="" class="dep3">사전확인 접수처리</a>
+        </div>
+      </div>
+      <a href="" class="dep1 has-treemenu">관리자</a>
+      <div>
+        <a href="" class="dep2 has-treemenu">변경 이력 관리</a>
+        <div>
+          <a href="" class="dep3">국공립어린이집 동의</a>
+          <a href="" class="dep3">설계변경 동의</a>
+          <a href="" class="dep3">다함께돌봄센터 동의</a>
+          <a href="" class="dep3">My단지 서비스 신청</a>
+          <a href="" class="dep3">견본주택 방문예약</a>
+          <a href="" class="dep3">옵션신청예약</a>
+          <a href="" class="dep3">서류접수 및 계약일</a>
+          <a href="" class="dep3">전매 방문예약</a>
+          <a href="" class="dep3">대출자서 방문예약</a>
+        </div>
+        <a href="" class="dep2 has-treemenu">삭제 이력 관리</a>
+        <div>
+          <a href="" class="dep3">국공립어린이집 동의</a>
+          <a href="" class="dep3">설계변경 동의</a>
+          <a href="" class="dep3">다함께돌봄센터 동의</a>
+          <a href="" class="dep3">My단지 서비스 신청</a>
+          <a href="" class="dep3">견본주택 방문예약 신청</a>
+          <a href="" class="dep3">옵션신청예약 신청</a>
+          <a href="" class="dep3">서류접수 및 계약일 예약</a>
+          <a href="" class="dep3">전매 방문예약</a>
+          <a href="" class="dep3">대출자서 방문예약</a>
+        </div>
+        <a href="" class="dep2 has-treemenu">사용자 관리</a>
+        <div>
+          <a href="" class="dep3">사용자 계정</a>
+          <a href="" class="dep3">사용자 권한</a>
+          <a href="" class="dep3">관리자 이용내역</a>
+          <a href="" class="dep3">권한변경 이력</a>
+          <a href="" class="dep3">로그인 이력</a>
+        </div>
+        <a href="" class="dep2">알림톡템플릿 관리</a>
+      </div>
+    </div>
+    <script>
+      $(".side-nav").click(function (e) {
+        var target = e.target;
+
+        if (e.target.classList.contains("has-treemenu")) {
+          e.preventDefault();
+          var subItem = $(target).next();
+          var depth = $(subItem).parents().length;
+          var allAtDepth = $(".side-nav div").filter(function () {
+            if ($(this).parents().length >= depth && this !== subItem.get(0)) {
+              return true;
+            }
+          });
+          $(allAtDepth).slideUp(0, function () {
+            $(allAtDepth).prev().removeClass("focus");
+          });
+          subItem.slideToggle(0, function () {
+            $(target).toggleClass("focus");
+          });
+        }
+      });
+    </script>
   </nav>
 </aside>

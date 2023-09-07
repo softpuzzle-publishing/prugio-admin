@@ -48,6 +48,7 @@
             </div>
           </div>
           <!-- //필터 영역 -->
+
           <!-- table 상단 -->
           <div class="table-top">
             <div class="row align-items-end justify-content-between">
@@ -70,6 +71,196 @@
             </div>
           </div>
           <!-- //table 상단 -->
+
+          <!-- 모달 중첩 테스트 -->
+          <div class="text-center mb-2">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalTest1">모달 중첩 테스트</button>
+          </div>
+          <div class="modal modal-default" tabindex="-1" data-bs-backdrop="static" id="modalTest1">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">모달 1</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>공지사항이 등록되었습니다</p>
+                  <p>공지사항이 두줄</p>
+                  <p>공지사항이 세줄</p>
+                  <p>공지사항이 이럴일없겠찌?</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modalTest2">모달2 열기</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark">확인</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal" tabindex="-1" data-bs-backdrop="static" id="modalTest2">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">모달 2</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modalTest3">모달3 열기</button>
+                  <p class="mb-10px">찾고자 하시는 지역의 이름을 입력하세요. 예)을지로, 퇴계로</p>
+                  <div class="filter-area py-3 mb-20px">
+                    <div class="row gx-2 justify-content-center align-items-center">
+                      <label class="col-auto col-form-label">지역명</label>
+                      <div class="col-auto">
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-auto">
+                        <button type="button" class="btn btn-danger">검색</button>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="table table-bordered table-hover">
+                    <colgroup>
+                      <col style="width: 100px">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="text-center">우편번호</th>
+                        <th class="text-center">주소</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">12345</td>
+                        <td class="text-start">
+                          <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">12345</td>
+                        <td class="text-start">
+                          <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">12345</td>
+                        <td class="text-start">
+                          <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" class="text-center">
+                          <p class="text-secondary py-2">데이터가 없습니다.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- pagination -->
+                  <nav>
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="First">
+                          <span class="material-icons">
+                            keyboard_double_arrow_left
+                          </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span class="material-icons">
+                            keyboard_arrow_left
+                          </span>
+                        </a>
+                      </li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span class="material-icons">
+                            keyboard_arrow_right
+                          </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Last">
+                          <span class="material-icons">
+                            keyboard_double_arrow_right
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- //pagination -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-default" tabindex="-1" data-bs-backdrop="static" id="modalTest3">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">모달 3</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modalTest4">모달4 열기</button>
+                  <table class="table table-bordered">
+                    <colgroup>
+                      <col style="width: 130px">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>이름</th>
+                        <td><input type="text" class="form-control" value="정용채"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark">확인</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-default" tabindex="-1" data-bs-backdrop="static" id="modalTest4">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">모달 4</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  작업을 중단하고 돌아가시겠습니까?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">확인</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const testModal2 = document.getElementById('modalTest2')
+            testModal2.addEventListener('show.bs.modal', event => {
+              testModal2.querySelector(".modal-content").style.left = "200px";
+              testModal2.querySelector(".modal-content").style.top = "200px";
+            })
+
+            const testModal3 = document.getElementById('modalTest3')
+            testModal3.addEventListener('show.bs.modal', event => {
+              testModal3.querySelector(".modal-content").style.left = "-200px";
+              testModal3.querySelector(".modal-content").style.top = "-200px";
+            })
+          </script>
+          <!-- //모달 중첩 테스트 -->
+
           <!-- fixed table -->
           <div class="table-scroll-x">
             <div class="table-inner" style="width: calc(100% - 240px);margin-left: 240px;">
