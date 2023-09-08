@@ -42,14 +42,14 @@
       }
       &:hover{
         .third-level{
-          display: block;position: absolute;left: 100%;top: 0;z-index: 1; width: 160px;background: #000;
+          display: block;position: absolute;left: 100%;top: 0;z-index: 1; min-width: 100px; width: auto; background: #000;
         }
       }
     }
     .third-level{
       display: none;
       > li{
-        > a{padding-left: 50px;} 
+        > a{ text-align: center; justify-content: center; } 
         &.active{
           > a{background: #000;}
         }
@@ -58,7 +58,7 @@
     }
   }
   > li.active{
-    .second-level{display: block;}
+    .second-level{display: block; }
     > a{
       &::after{transform: rotate(180deg);}
     }

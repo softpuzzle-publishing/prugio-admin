@@ -272,6 +272,7 @@ body,
   height: 100vh;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 #main {
@@ -388,14 +389,16 @@ body,
   left: 100%;
   top: 0;
   z-index: 1;
-  width: 160px;
+  min-width: 100px;
+  width: auto;
   background: #000;
 }
 .sidebar-nav .second-level .third-level {
   display: none;
 }
 .sidebar-nav .second-level .third-level > li > a {
-  padding-left: 50px;
+  text-align: center;
+  justify-content: center;
 }
 .sidebar-nav .second-level .third-level > li.active > a {
   background: #000;
@@ -965,7 +968,6 @@ table:not(.table-hover) td {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  z-index: -1;
 }
 .dashboard-wrap .detail-card-list.whide {
   grid-template-columns: repeat(6, 1fr);

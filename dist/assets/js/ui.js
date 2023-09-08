@@ -71,7 +71,8 @@ var Aside = {
       var $target = $(this).parent();
       if ($target.hasClass("has-treeview")) {
         e.preventDefault();
-        $target.toggleClass("active");
+        $(this).next(".second-level").stop().slideToggle(300);
+        $target.toggleClass('active').siblings().removeClass('active').children('.second-level').slideUp(300);
       }
     });
   }
