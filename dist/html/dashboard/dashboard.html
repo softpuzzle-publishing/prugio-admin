@@ -1806,18 +1806,26 @@
             var appendHtml = `<div class="third-level">${thirdLevelHtml}</div>`;
             $('.third-floating').html(appendHtml);
             $('.third-floating').css({
-              left: '180px',
+              left: '200px',
               top: `${offsetTop}px`,
             });
+            if ($(this).parent().parent().hasClass('show')) {
+              $('.third-floating').css({
+                background: '#444',
+              });
+            }
           });
           $('#aside').on('mouseleave', function () {
             $('.third-floating').empty();
+            $('.third-floating').removeAttr('style');
           });
           $('.sidebar-nav-wrap').on('scroll', function () {
             $('.third-floating').empty();
+            $('.third-floating').removeAttr('style');
           });
           $('.has-treeview > a').on('click', function () {
             $('.third-floating').empty();
+            $('.third-floating').removeAttr('style');
           });
         </script>
         <main id="main" class="dashboard">

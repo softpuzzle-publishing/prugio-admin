@@ -413,14 +413,14 @@ body,
   position: absolute;
   left: -9999px;
   z-index: 100;
-  width: 200px;
-  padding-left: 20px;
+  width: 160px;
   background: #000;
   text-align: center;
 }
 .third-floating a {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #fff;
   text-decoration: none;
   min-height: 40px;
@@ -428,6 +428,9 @@ body,
   font-size: 15px;
   font-weight: 500;
   line-height: 1.15;
+}
+.third-floating li.active a {
+  background: #666;
 }
 
 .sidebar-bottom {
